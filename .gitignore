@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.env*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pdf_tools
+reference_pdf
+screenshots
+tools
+tools/extract_pdf.py

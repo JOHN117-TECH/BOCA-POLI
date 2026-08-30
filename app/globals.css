@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fa;
+  color: #1f2937;
+  font-family: Arial, Roboto, Inter, sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 2px;
+}
+
+.app-shell {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app-shell main,
+.app-shell main > *,
+.app-shell section,
+.app-shell article {
+  min-width: 0;
+}
+
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.responsive-table th {
+  background: #f8fafc;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.responsive-table th,
+.responsive-table td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.875rem 1rem;
+  vertical-align: middle;
+}
+
+.responsive-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.responsive-table tbody tr:hover {
+  background: #fbfdff;
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.drawer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 760px) {
+  .responsive-table thead {
+    display: none;
+  }
+
+  .responsive-table,
+  .responsive-table tbody,
+  .responsive-table tr,
+  .responsive-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .responsive-table tbody tr {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .responsive-table td {
+    border-bottom: 1px solid #eef2f7;
+    display: block;
+    min-height: 0;
+    padding: 0.875rem;
+  }
+
+  .responsive-table td::before {
+    content: attr(data-label);
+    color: #6b7280;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .responsive-table td > * {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    text-align: left;
+  }
+
+  .action-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .drawer-grid {
+    grid-template-columns: 1fr;
+  }
+}
