@@ -5,10 +5,9 @@
     "jsx": "preserve"
   },
   "include": [
-    "app/**/*.js",
-    "app/**/*.jsx",
-    "*.js",
-    "*.mjs"
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.mjs"
   ],
   "exclude": [
     "node_modules",
