@@ -1,5 +1,5 @@
-import { LogOut, Menu, Play, UserRound } from "lucide-react";
-import { Badge, Button } from "../ui";
+import { LogOut, Menu, Play, UserRound } from 'lucide-react';
+import { Badge, Button } from '../ui';
 
 export default function Header({ onMenu }) {
   return (
@@ -14,13 +14,17 @@ export default function Header({ onMenu }) {
           <Menu className="h-5 w-5" />
         </button>
 
-        <div className="min-w-0 flex-1">
-          <p className="text-sm font-semibold text-boca-muted">Competencia activa</p>
+        <div className="min-w-0 flex-1 pt-4">
+          <p className="text-sm font-semibold text-boca-muted">
+            Competencia activa
+          </p>
           <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
             <h1 className="break-words text-[18px] font-bold leading-tight tracking-normal text-boca-text sm:text-[22px]">
               Maratón de Programación 2026
             </h1>
-            <Badge label="En curso" tone="success" icon={Play} />
+            <div className="mb-4">
+              <Badge label="En curso" tone="success" icon={Play} />
+            </div>
           </div>
         </div>
 
@@ -40,4 +44,3 @@ export default function Header({ onMenu }) {
     </header>
   );
 }
-
